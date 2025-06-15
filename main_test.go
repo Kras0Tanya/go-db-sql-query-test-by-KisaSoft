@@ -104,7 +104,7 @@ func TestInsertClientDeleteClientThenCheck(t *testing.T) {
 	require.NoError(t, err)
 	require.NotEmpty(t, id)
 
-	_, err := selectClient(db, id)
+	_, err = selectClient(db, id)
 	require.NoError(t, err)
 
 	err = deleteClient(db, id)
